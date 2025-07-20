@@ -31,4 +31,4 @@ echo -e "\n✅ wallet.json has been updated!"
 cat wallet.json
 
 echo -e "\n➡️ You are now in the folder: $(pwd)"
-echo -e "\ncd octra_pre_client && ./run.sh\n"
+echo -e "\nfor run use : cd octra_pre_client && ./run.sh\n"
