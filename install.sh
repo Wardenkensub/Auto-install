@@ -15,8 +15,8 @@ pip install -r requirements.txt
 cp wallet.json.example wallet.json
 
 # Input PRIVATE KEY dan ADDRESS
-read -p "Enter your PRIVATE KEY B64: " priv
-read -p "Enter your OCTRA ADDRESS  : " addr
+read -p "Enter your PRIVATE KEY: " priv
+read -p "Enter your OCTRA ADDRESS: " addr
 
 # Buat wallet.json aman tanpa sed
 cat > wallet.json <<EOF
@@ -31,4 +31,4 @@ echo -e "\n✅ wallet.json has been updated!"
 cat wallet.json
 
 echo -e "\n➡️ You are now in the folder: $(pwd)"
-echo -e "\nfor run use : cd octra_pre_client && ./run.sh\n"
+echo -e "➡️ For run use : cd octra_pre_client && ./run.sh\n"
