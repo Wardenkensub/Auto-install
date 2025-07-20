@@ -2,22 +2,23 @@
 
 echo "=== Octra Pre-Client Setup ==="
 
-# Clone & masuk ke folder
+# Clone & masuk folder
 git clone https://github.com/octra-labs/octra_pre_client.git || exit 1
 cd octra_pre_client || exit 1
 
-# Setup venv
+# Setup venv & install requirements
 python3 -m venv venv
 source venv/bin/activate
-
-# Install dependensi
 pip install -r requirements.txt
 
-# Minta input user
+# Salin template
+cp wallet.json.example wallet.json
+
+# Minta input
 read -p "Enter your PRIVATE KEY: " priv
 read -p "Enter your OCTRA ADDRESS: " addr
 
-# Buat wallet.json langsung
+# Overwrite wallet.json langsung (hindari sed)
 cat > wallet.json <<EOF
 {
   "priv": "$priv",
@@ -29,10 +30,5 @@ EOF
 echo -e "\n✅ wallet.json has been updated!"
 cat wallet.json
 
-# Cek apakah run.sh tersedia
-if [ -f "run.sh" ]; then
-  echo -e "\nTo start the client, run:"
-  echo "./run.sh"
-else
-  echo -e "\n⚠️ 'run.sh' not found in this repo."
-fi
+echo -e "\nTo start the client, run this inside the octra_pre_client folder:"
+echo "./run.sh"
