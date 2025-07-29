@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo "🚀 Starting Auto Installer for ocs01-test..."
+echo "By Kenji Subagja"
 
 # Step 1: Install Rust
 echo "📦 Installing Rust..."
