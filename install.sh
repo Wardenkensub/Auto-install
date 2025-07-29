@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo "=== Octra Pre-Client Setup ==="
+echo "By : Kenji subagja"
 
 # Clone repo dan masuk ke dalamnya
 git clone https://github.com/octra-labs/octra_pre_client.git || exit 1
