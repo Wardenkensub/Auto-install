@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "=== Octra Pre-Client Setup ==="
+echo "=== Octra Pre-Client Auto Install Setup ==="
 echo "By : Kenji subagja"
 
 # Clone repo 
